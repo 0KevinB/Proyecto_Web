@@ -1,0 +1,45 @@
+/* ... (tu código existente) ... */
+
+.carousel-item {
+    transition: transform 0.25s;
+}
+
+.carousel-slide {
+    transform: translateX(0);
+}
+
+.carousel-item.carousel-slide {
+    transform: translateX(0);
+}
+
+.carousel-item.next {
+    transform: translateX(100%);
+}
+
+.carousel-item.prev {
+    transform: translateX(-100%);
+}
+
+/* Nueva regla para centrar la transición */
+.carousel-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Nueva clase para ajustar la posición de la caption */
+.carousel-caption-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.carousel-item img {
+    width: 100%;
+    /* Establece el ancho al 100% del contenedor */
+    height: 300px;
+    /* Establece la altura deseada */
+    object-fit: cover;
+    /* Mantiene la proporción y corta el exceso */
+}
